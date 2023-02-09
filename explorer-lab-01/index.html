@@ -7,7 +7,73 @@
         <title>Vite App</title>
     </head>
     <body>
-        <div id="app"></div>
-        <script type="module" src="/main.js"></script>
+        <div id="app">
+            <div class="container">
+                <div class="form-container">
+                    <form action="formSubmit">
+                        <label>Card Number</label>
+                        <input id="cardnumber" val type="text" />
+
+                        <label>Name on the card</label>
+                        <input id="cardOwner" name="cardowner" type="text" />
+
+                        <div class="col-2">
+                            <div>
+                                <label>expiry</label>
+                                <input id="cardExpiry" name="expiry" type="text" />
+                            </div>
+
+                            <div>
+                                <label>cvc</label>
+                                <input id="cardCvc" name="cvc" type="text" />
+                            </div>
+                        </div>
+
+                        <input type="submit" value="add card" />
+                    </form>
+                </div>
+
+                <div class="card-container">
+                    <div class="card">
+                        <img class="contactless" src="./images/contactless.svg"/>
+                        <img class="logo" src="./images/visa.svg" alt=""/>
+                        <img class="chip" src="./images/chip.svg" alt="">
+
+                        <div class="info-container">
+                            <div class="number">0000 0000 0000 0000</div>
+
+                            <div class="label">name</div>
+                            <div class="name">Card Owner</div>
+
+                            <div class="col-2">
+                                <div>
+                                    <div class="label">expiry</div>
+                                    <div class="expiry">00/00</div>
+                                </div>
+
+                                <div>
+                                    <div class="label">cvc</div>
+                                    <div class="cvc">000</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <svg width="500px" height="320px" viewBox="0 0 500 320" id="cardBg">
+                            <defs>
+                                <linearGradient x1="0%" y1="30.1386901%" x2="98.97589%" y2="70.48%" id="cardDef">
+                                    <stop stop-color="#464646" offset="50%"></stop>
+                                    <stop stop-color="#1B1B1C" offset="100%"></stop>
+                                </linearGradient>
+                            </defs>
+
+                            <g stroke="1" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect id="Rectangle" fill="url(#cardDef)" x="0" y="0" width="500" height="320" rx="6"></rect>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/js/main.js"></script>
     </body>
 </html>

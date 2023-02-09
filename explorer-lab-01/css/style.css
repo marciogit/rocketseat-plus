@@ -1,0 +1,198 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 400px 550px;
+    grid-template-rows: auto;
+    border: 1px solid #000;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #242424;
+}
+
+.form-container {
+    width: 380px;
+    height: 100%;
+    padding: 30px;
+}
+
+form .col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 15px 0 5px 0;
+}
+
+label.col-2 {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 10px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: border .3s;
+}
+
+input.col-2 {
+    display: block;
+    float: left;
+    width: calc(50% - 0px);
+    margin: 0 0px 0 0;
+}
+
+input:focus {
+    border-color: #646cff;
+    outline: none;
+}
+
+input[type=submit] {
+    height: 50px;
+    margin: 20px 0 20px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    background-color: #646cff;
+    transition: background-color .3s;
+}
+
+input[type=submit]:hover {
+    background-color: #2C3073;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    height: 100%;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    height: 320px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.432);
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.432);
+    -moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.432);
+    overflow: hidden;
+}
+
+.card > img {
+    position: relative;
+    z-index: 1;
+}
+
+.card .contactless {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+}
+
+.card .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+}
+
+.card .chip {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+}
+
+.card .info-container {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    width: calc(100% - 40px);
+    z-index: 1;
+}
+
+.card .info-container .number {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+.label {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.info-container  > .col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0 0 0;
+}
+
+.name, .expiry, .cvc {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.card svg#cardBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
