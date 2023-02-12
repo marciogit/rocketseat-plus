@@ -9,32 +9,35 @@
     <body>
         <div id="app">
             <div class="container">
+                <!-- FORM -->
                 <div class="form-container">
-                    <form action="formSubmit">
+                    <form>
                         <label>Card Number</label>
-                        <input id="cardnumber" val type="text" />
+                        <input id="inputCardNumber" type="text" />
 
                         <label>Name on the card</label>
-                        <input id="cardOwner" name="cardowner" type="text" />
+                        <input id="inputCardOwner" type="text" />
 
                         <div class="col-2">
                             <div>
                                 <label>expiry</label>
-                                <input id="cardExpiry" name="expiry" type="text" />
+                                <input id="inputCardExpiry" type="text" />
                             </div>
 
                             <div>
                                 <label>cvc</label>
-                                <input id="cardCvc" name="cvc" type="text" />
+                                <input id="inputCardCvc" type="text" />
                             </div>
                         </div>
 
-                        <input type="submit" value="add card" />
+                        <input id="addCard" type="submit" value="add card" />
                     </form>
                 </div>
 
+                <!-- CARD CONTAINER -->
                 <div class="card-container">
                     <div class="card">
+
                         <img class="contactless" src="./images/contactless.svg"/>
                         <img class="logo" src="./images/visa.svg" alt=""/>
                         <img class="chip" src="./images/chip.svg" alt="">
@@ -74,6 +77,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- JSCRIPT -->
         <script type="module" src="/js/main.js"></script>
     </body>
 </html>
